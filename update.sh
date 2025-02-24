@@ -12,10 +12,3 @@ echo "$version" >currentversion
 if [[ "$currentversion" == "$version" ]]; then
     exit
 fi
-git config user.name ""
-git config user.email ""
-git add currentversion
-git commit -a -m ""
-git tag -f latest
-git push
-git push origin --tags -f
