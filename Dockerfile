@@ -3,7 +3,7 @@ FROM cm2network/steamcmd:steam
 ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /opt/subsistence
 
-RUN /home/steam/steamcmd/steamcmd.sh +force_install_dir "/opt/subsistence" +login anonymous +app_update 26997904 validate +quit
+RUN /home/steam/steamcmd/steamcmd.sh +force_install_dir "/opt/subsistence" +login anonymous +app_update 1362640 validate +quit
 
 ENV GAME_PORT=7778
 ENV MAX_PLAYERS=32
