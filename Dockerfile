@@ -1,4 +1,4 @@
-FROM 
+FROM cm2network/steamcmd:steam
 
 ARG DEBIAN_FRONTEND=noninteractive
 WORKDIR /opt/subsistence
