@@ -1,14 +1,13 @@
 services:
   dedicated-server:
-    image: 
+    image: OfficialASMNESS/Subistence:latest
     # build: # only use in test
     #   context: .
     restart: unless-stopped
     network_mode: bridge
     ports:
       - 7778:7778/udp
-      # - 8212:8212/tcp # only use in RESTAPI_ENABLED=true
-      # - 25575:25575/tcp # only use in RCON_ENABLED=true
+      # - 7779:7779/tcp # only use in RCON_ENABLED=true
     environment:
       - GAME_PORT=7778
       - MAX_PLAYERS=32
@@ -23,8 +22,6 @@ services:
       - SERVER_PASSWORD=
       - RCON_ENABLED=false
       - RCON_PORT=7779
-      - RESTAPI_ENABLED=false
-      - RESTAPI_PORT=7778
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./data:/opt/subsistence
